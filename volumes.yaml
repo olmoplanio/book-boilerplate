@@ -1,0 +1,11 @@
+# Compilation Configuration
+# This file defines the volumes and their compilation parameters
+
+volumes:
+  book1:
+    title: "Book 1"
+    description: "Description"
+    input_name: "content/Book1"
+    output_name: "book1"
+    template: "templates/Essay.ott"
+  

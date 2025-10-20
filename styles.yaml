@@ -1,0 +1,40 @@
+# Custom Styles Configuration
+# This file defines regular expression patterns and replacements for applying custom styles
+
+styles:
+    Hieroglyphic:
+      patterns:
+        - pattern: '〈([^〉]+)〉(?![<ᴰ])'
+          replacement: '〈[\1]{custom-style="Hieroglyphic"}〉'
+    Demotic:
+      patterns:
+        - pattern: '〈([^〉]+)〉ᴰ'
+          replacement: '〈[‮\1‬]{custom-style="Demotic"}〉'
+        - pattern: '〈([^〉]+)〉<sup>D</sup>'
+          replacement: '〈[‮\1‬]{custom-style="Demotic"}〉'
+    Literal:
+      patterns:
+        - pattern: '‹([^›]+)›'
+          replacement: '[‹\1›]{custom-style="Orthographic"}'
+    Phonetic:
+      patterns:
+        - pattern: '\\[([^\\]+)\\]'
+          replacement: '[[\1]]{custom-style="Phonetic"}'
+        - pattern: '(?![!\]])\[([^\]]+)\](?![:{(\(\[_])'
+          replacement: '[[\1]]{custom-style="Phonetic"}'
+        - pattern: '(?<![a-zA-Z])/([^/\n]+)/(?=[^a-zA-Z]|$)'
+          replacement: '[/\1/]{custom-style="Phonetic"}'
+    Code:
+      patterns:
+        - pattern: '(?<![a-zA-Z])`([^`\n]+)`(?=[^a-zA-Z]|$)'
+          replacement: '[\1]{custom-style="Code"}'
+    # Superscript:
+    #   patterns:
+    #     - pattern: '\^([^^]+)\^'
+    #       replacement: '[\1]{custom-style="Superscript"}'
+    Diaphonetic:
+      patterns:
+        - pattern: '/“'
+          replacement: '//'
+        - pattern: 'ˮ/'
+          replacement: '//'

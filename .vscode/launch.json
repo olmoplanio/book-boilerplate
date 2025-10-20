@@ -1,0 +1,67 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "volumes.yaml",
+                "styles.yaml",
+                "basic.nam"
+            ],
+            "justMyCode": true
+        },
+        {
+            "name": "Test Build Books - Art Deco",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/devops/build_books.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/tests/artdeco",
+            "args": [
+                "volumes.yaml",
+                "styles.yaml",
+                "basic.nam"
+            ],
+            "justMyCode": true
+        },
+        {
+            "name": "Build Books",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/devops/build_books.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "volumes.yaml",
+                "styles.yaml",
+                "basic.nam",
+                "--output",
+                "temp"
+            ],
+            "justMyCode": true
+        },
+        {
+            "name": "Build Books - Coptic Diaphonetic Dictionary",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/devops/build_books.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "volumes.yaml",
+                "styles.yaml",
+                "basic.nam",
+                "--output",
+                "temp",
+                "-vol",
+                "coptic_diaphonetic_dictionary"
+            ],
+            "justMyCode": true
+        },
+    ]
+}

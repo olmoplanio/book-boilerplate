@@ -1,0 +1,19 @@
+# Compilation Configuration
+# This file defines the volumes and their compilation parameters
+
+volumes:
+  volume-001:
+    title: "Art Deco: Foundations"
+    description: "An introduction to Art Deco style and architecture"
+    input_name: "content/volume-001"
+    output_name: "art_deco_foundations"
+    template: "templates/Simple.ott"
+    
+  volume-002:
+    title: "Art Deco: Applications"
+    description: "Decorative arts, graphic design, and legacy of Art Deco"
+    input_name: "content/volume-002"
+    template: "templates/Simple.ott"
+    output_name: "art_deco_applications"
+
+  

@@ -1,0 +1,3 @@
+# Python dependencies for the books build system
+PyYAML>=6.0
+loguru>=0.7.0

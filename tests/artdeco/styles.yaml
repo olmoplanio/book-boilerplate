@@ -1,0 +1,35 @@
+# Custom Styles Configuration
+# This file defines regular expression patterns and replacements for applying custom styles
+
+styles:
+  # Phonetic style - text surrounded by slashes with word boundaries
+  phonetic:
+    patterns:
+      - pattern: '(\s)(/[^/]+/)(\s)'
+        replacement: '\\1[\\2]{custom-style="Phonetic"}\\3'
+  
+  # Emphasis style - text in italics or bold that should get custom emphasis
+  custom_emphasis:
+    patterns:
+      - pattern: '\*\*([^*]+)\*\*'
+        replacement: '[\\1]{custom-style="Strong_Emphasis"}'
+      - pattern: '\*([^*]+)\*'
+        replacement: '[\\1]{custom-style="Mild_Emphasis"}'
+  
+  # Foreign terms - text that might be in different languages
+  foreign:
+    patterns:
+      - pattern: '\{foreign:([^}]+)\}'
+        replacement: '[\\1]{custom-style="Foreign"}'
+  
+  # Technical terms
+  technical:
+    patterns:
+      - pattern: '\{tech:([^}]+)\}'
+        replacement: '[\\1]{custom-style="Technical"}'
+  
+  # Quote styles
+  quote_style:
+    patterns:
+      - pattern: '"([^"]+)"'
+        replacement: '[\\1]{custom-style="Quote"}'
