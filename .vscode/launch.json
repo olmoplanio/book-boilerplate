@@ -45,23 +45,5 @@
             ],
             "justMyCode": true
         },
-        {
-            "name": "Build Books - Coptic Diaphonetic Dictionary",
-            "type": "debugpy",
-            "request": "launch",
-            "program": "${workspaceFolder}/devops/build_books.py",
-            "console": "integratedTerminal",
-            "cwd": "${workspaceFolder}",
-            "args": [
-                "volumes.yaml",
-                "styles.yaml",
-                "basic.nam",
-                "--output",
-                "temp",
-                "-vol",
-                "coptic_diaphonetic_dictionary"
-            ],
-            "justMyCode": true
-        },
     ]
 }

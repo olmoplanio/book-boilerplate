@@ -7,5 +7,5 @@ volumes:
     description: "Description"
     input_name: "content/Book1"
     output_name: "book1"
-    template: "templates/Essay.ott"
+    template: "templates/Simple.ott"
   
