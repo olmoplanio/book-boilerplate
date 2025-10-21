@@ -45,9 +45,9 @@ The process consists of several steps, implemented in python script that can be 
    Example of name list:
 
     ```nam
-    space      0x0020
-    exclam     0x0021
-    dblquote   0x0022
+    0x0020 space
+    0x0021 exclamation
+    0x0022 quot
     ```
 
 3. **Custom Styles**  
